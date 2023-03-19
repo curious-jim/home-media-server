@@ -5,6 +5,7 @@
 - Jackett (API Support for torrent trackers)
 - FlareSolverr (bypass Cloudflare protection)
 - qBittorrent with VPN kill switch
+- Bazarr (manage and download subtitles)
 
 ## qBittorrent
 

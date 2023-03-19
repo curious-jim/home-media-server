@@ -82,3 +82,18 @@ services:
       - ${MEDIA_PATH}/Movie/:/movies
       - ${DOWNLOADS_PATH}/:/downloads
       - /etc/localtime:/etc/localtime:ro
+
+  bazarr:
+    restart: always
+    image: lscr.io/linuxserver/bazarr
+    container_name: bazarr
+    environment:
+      - PUID=1000
+      - PGID=100
+    ports:
+      - 6767:6767
+    volumes:
+      - ${CONFIG_PATH}/Bazarr/:/config
+      - ${MEDIA_PATH}/Movie/:/movies
+      - ${MEDIA_PATH}/TV/:/tv
+      - /etc/localtime:/etc/localtime:ro
